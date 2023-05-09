@@ -1,4 +1,4 @@
-import { configureStore } from '@testing-library/react';
+import { configureStore } from '@reduxjs/toolkit';
 import bookReducer from './books/bookSlice';
 import categoryReducer from './category/categorySlice';
 
