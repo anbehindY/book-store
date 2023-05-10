@@ -11,7 +11,9 @@ const AddBook = () => {
       author: e.target.author.value,
       item_id: nanoid(),
     };
-    dispatch(addBook(book));
+    if (book.title && book.author) dispatch(addBook(book));
+    e.target.title.value = '';
+    e.target.author.value = '';
   };
 
   return (
