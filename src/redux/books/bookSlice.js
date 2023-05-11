@@ -26,15 +26,15 @@ export const deleteBooks = createAsyncThunk(
   },
 );
 
+const initialState = {
+  booksArray: [],
+  isLoading: false,
+  error: undefined,
+};
+
 const bookSlice = createSlice({
   name: 'allBooks',
-  initialState: {
-    booksArray: [],
-    isLoading: false,
-    error: undefined,
-    added: '',
-    deleted: '',
-  },
+  initialState,
   reducers: {
     addBook: (state, action) => {
       state.booksArray.push(action.payload);
@@ -49,11 +49,32 @@ const bookSlice = createSlice({
       .addCase(getBooks.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getBooks.fulfilled, (state) => {
+      .addCase(getBooks.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.booksArray = Object.values(getBooks).flat();
+        state.booksArray = Object.values(action.payload).flat();
       })
       .addCase(getBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(postBooks.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(postBooks.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.booksArray.push(action.payload);
+      })
+      .addCase(postBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(deleteBooks.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(deleteBooks.fulfilled, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(deleteBooks.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       });
