@@ -49,9 +49,14 @@ const bookSlice = createSlice({
       .addCase(getBooks.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(getBooks.fulfilled, (state, action) => {
+      .addCase(getBooks.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.booksArray = Object.values(action.payload).flat();
+        state.booksArray = Object.entries(payload).flatMap(([key, value]) => value.map((item) => ({
+          ...item,
+          item_id: key,
+          title: item.title,
+          author: item.author,
+        })));
       })
       .addCase(getBooks.rejected, (state, action) => {
         state.isLoading = false;
