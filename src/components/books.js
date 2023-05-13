@@ -1,5 +1,6 @@
 import BooksList from './booksList';
 import AddBook from './addBook';
+import '../styles/books.css';
 
 const Books = () => (
   <main className="mainSection">

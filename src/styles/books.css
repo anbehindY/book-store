@@ -1,0 +1,4 @@
+.mainSection {
+    display: flex;
+    flex-direction: column;
+}
