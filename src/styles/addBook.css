@@ -26,6 +26,7 @@
 
 .inputTitle,
 .inputAuthor {
+  padding: 10px;
   width: 300px;
   height: 40px;
   outline: none;

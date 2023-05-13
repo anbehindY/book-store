@@ -32,8 +32,8 @@ const AddBook = () => {
     <div className="bookInput">
       <h3 className="addBook">ADD NEW BOOK</h3>
       <form className="bookForm" onSubmit={submitHandler}>
-        <input type="text" className="inputTitle" name="title" placeholder="    Book title" />
-        <input type="text" className="inputAuthor" name="author" placeholder="    Author" />
+        <input type="text" className="inputTitle" name="title" placeholder="Book title" />
+        <input type="text" className="inputAuthor" name="author" placeholder="Author" />
         <button type="submit" className="btnAdd">ADD BOOK</button>
       </form>
     </div>
