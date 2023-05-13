@@ -10,7 +10,7 @@ const AddBook = () => {
     const book = {
       title: e.target.title.value,
       author: e.target.author.value,
-      category: 'not yet',
+      category: 'Literature',
       item_id: nanoid(),
     };
     if (book.title && book.author) {
