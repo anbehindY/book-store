@@ -1,8 +1,8 @@
 .booksList {
-    display: flex;
-    padding: 30px 0;
-    flex-direction: column;
-    gap: 25px;
-    overflow-y: auto;
-    border-bottom: 1px solid #e8e8ee;
+  display: flex;
+  padding: 30px 0;
+  flex-direction: column;
+  gap: 25px;
+  overflow-y: auto;
+  border-bottom: 1px solid #e8e8ee;
 }
