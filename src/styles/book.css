@@ -3,7 +3,7 @@
 
 .book {
   border: 1px solid #e6e6e6;
-  height: 180px;
+  height: 150px;
   display: flex;
   padding: 0 30px;
   background-color: #fff;
@@ -143,16 +143,17 @@
 }
 
 .update {
-  margin-top: 20px;
-  width: 200px;
-  height: 40px;
+  margin-top: 15px;
+  padding: 5px;
+  width: 130px;
+  height: 30px;
   border: none;
   outline: none;
   background-color: #0290ff;
   color: #fff;
   border-radius: 5px;
   font-family: RobotoSlab, sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
