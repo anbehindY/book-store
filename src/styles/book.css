@@ -119,23 +119,24 @@
 
 .chapter {
     padding-left: 50px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: RobotoSlab;
-  font-size: 1.3rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 25px;
   letter-spacing: -0.4px;
   color: #121212;
-
 }
 
+.update {
+    margin-top: 20px;
+}
 .span {
     padding-bottom: 10px;
   opacity: 0.5;
   font-family: RobotoSlab;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
