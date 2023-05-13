@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bookInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addBook {
+  margin-top: 30px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.bookForm {
+  display: flex;
+  gap: 30px;
+}
+
+.inputTitle,
+.inputAuthor {
+  padding: 10px;
+  width: 40%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.btnAdd {
+  outline: none;
+  border: none;
+  background-color: #0290ff;
+  color: #fff;
+  width: 20%;
+  height: 40px;
+  border-radius: 4px;
+}

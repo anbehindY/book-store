@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { addBook, postBooks } from '../redux/books/bookSlice';
+import '../styles/addBook.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const AddBook = () => {
     const book = {
       title: e.target.title.value,
       author: e.target.author.value,
-      category: 'not yet',
+      category: 'Literature',
       item_id: nanoid(),
     };
     if (book.title && book.author) {
@@ -31,8 +32,8 @@ const AddBook = () => {
     <div className="bookInput">
       <h3 className="addBook">ADD NEW BOOK</h3>
       <form className="bookForm" onSubmit={submitHandler}>
-        <input type="text" className="title" name="title" placeholder="Book title" />
-        <input type="text" className="author" name="author" placeholder="Author" />
+        <input type="text" className="inputTitle" name="title" placeholder="Book title" />
+        <input type="text" className="inputAuthor" name="author" placeholder="Author" />
         <button type="submit" className="btnAdd">ADD BOOK</button>
       </form>
     </div>
