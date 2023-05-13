@@ -1,17 +1,28 @@
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addBook } from '../redux/books/bookSlice';
+import { addBook, postBooks } from '../redux/books/bookSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     const book = {
       title: e.target.title.value,
       author: e.target.author.value,
+      category: 'not yet',
       item_id: nanoid(),
     };
-    if (book.title && book.author) dispatch(addBook(book));
+    if (book.title && book.author) {
+      dispatch(addBook(book));
+      dispatch(postBooks(book))
+        .then(() => {
+          e.target.title.value = '';
+          e.target.author.value = '';
+        })
+        .catch((error) => {
+          alert.error('Failed to add book', error);
+        });
+    }
     e.target.title.value = '';
     e.target.author.value = '';
   };
