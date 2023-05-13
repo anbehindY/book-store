@@ -10,11 +10,13 @@
 
 .logo {
   color: #0290ff;
+  width: 20%;
 }
 
 .navBar {
   display: flex;
   gap: 20px;
+  width: 70%;
 }
 
 .link1 {
@@ -53,5 +55,6 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
-  margin-left: 58%;
+  width: 60px;
+  height: 60px;
 }
