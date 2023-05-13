@@ -27,7 +27,7 @@
 .inputTitle,
 .inputAuthor {
   padding: 10px;
-  width: 300px;
+  width: 40%;
   height: 40px;
   outline: none;
   border: 1px solid #e8e8e8;
@@ -39,7 +39,7 @@
   border: none;
   background-color: #0290ff;
   color: #fff;
-  width: 160px;
+  width: 20%;
   height: 40px;
   border-radius: 4px;
 }
