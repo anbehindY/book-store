@@ -1,0 +1,7 @@
+.booksList {
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+    gap: 25px;
+    overflow-y: auto;
+}

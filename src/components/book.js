@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteBooks, removeBook } from '../redux/books/bookSlice';
+import '../styles/book.css';
 
 const Book = ({ bookInfo }) => {
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ const Book = ({ bookInfo }) => {
     dispatch(deleteBooks(id));
   };
   return (
-    <div>
+    <div className="book">
       <div className="description">
         <p className="category">{bookInfo.category}</p>
         <h3 className="title">{bookInfo.title}</h3>
@@ -22,20 +23,19 @@ const Book = ({ bookInfo }) => {
         </div>
       </div>
       <div className="progress">
-        <img src="" alt="Progress circle" />
+        <div className="progressCircle" />
         <div className="completion">
-          <p className="percent">{bookInfo.progress}</p>
+          <p className="percent">65%</p>
           <small className="percentText">completed</small>
         </div>
-      </div>
-      <div className="borderV" />
-      <div className="chapter">
-        <p>
-          <span>Current chapter</span>
-          <br />
-          {bookInfo.chapter}
-        </p>
-        <button type="button" className="update">Update Progress</button>
+        <div className="chapter">
+          <p>
+            <span className="span">Current chapter</span>
+            <br />
+            Chapter 17
+          </p>
+          <button type="button" className="update">Update Progress</button>
+        </div>
       </div>
     </div>
   );
